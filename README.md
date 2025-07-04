@@ -35,58 +35,57 @@ This repository was built for the **Lacuna Solar Survey Challenge** on Kaggle. I
 
 ### 1. Clone the repo
 
-git clone https://github.com/yourusername/solar-panel-prediction.git
-cd solar-panel-prediction
+  git clone https://github.com/yourusername/solar-panel-prediction.git
+  cd solar-panel-prediction
 
 ### 2. Set up environment
-bash
-Copy
-Edit
-pip install -r requirements.txt
-Make sure you have access to a CUDA-compatible GPU and your data paths are correctly set in the script.
+  pip install -r requirements.txt
+  Make sure you have access to a CUDA-compatible GPU and your data paths are correctly set in the script.
 
 ## Training
-To train the model across 3 folds:
-python main.py
-The best model per fold will be saved as:
-best_model_fold0.pth
-best_model_fold1.pth
-best_model_fold2.pth
+  To train the model across 3 folds:
+  python main.py
+  The best model per fold will be saved as:
+  best_model_fold0.pth
+  best_model_fold1.pth
+  best_model_fold2.pth
 
 ## Inference & Submission
-Predictions on the test set will be saved as:
-
-submission_original.csv (with float predictions)
-
-submission_integer.csv (with rounded integers)
+  Predictions on the test set will be saved as:
+  
+  submission_original.csv (with float predictions)
+  
+  submission_integer.csv (with rounded integers)
 
 ## Model Architecture
-Backbone: tf_efficientnetv2_b3 from timm
-
-Metadata Processor: Fully connected + LayerNorm + Dropout
-
-Fusion: Image and metadata features are concatenated after attention
-
-Regressor: 2-head count predictor with Softplus output
+  Backbone: tf_efficientnetv2_b3 from timm
+  
+  Metadata Processor: Fully connected + LayerNorm + Dropout
+  
+  Fusion: Image and metadata features are concatenated after attention
+  
+  Regressor: 2-head count predictor with Softplus output
 
 ## Tools Used
-PyTorch + AMP
-
-Albumentations for augmentation
-
-K-Fold Cross Validation
-
-Huber Loss + CosineAnnealing Scheduler
-
-Multihead Attention for metadata embedding
+  PyTorch + AMP
+  
+  Albumentations for augmentation
+  
+  K-Fold Cross Validation
+  
+  Huber Loss + CosineAnnealing Scheduler
+  
+  Multihead Attention for metadata embedding
 
 ## Evaluation Metric
-Mean Absolute Error (MAE) on the boil_nbr and pan_nbr predictions.
+  Mean Absolute Error (MAE) on the boil_nbr and pan_nbr predictions.
+  Final MAE: 0.947831978
+  Rank: 45/712
 
 ## License
-This project is licensed under the MIT License.
+  This project is licensed under the MIT License.
 
 ### Acknowledgements
-Inspired by the Lacuna Solar Survey Challenge on Kaggle.
-
-EfficientNetV2 and pretrained models provided by timm.
+  Inspired by the Lacuna Solar Survey Challenge on Zindi.
+  
+  EfficientNetV2 and pretrained models provided by timm.
