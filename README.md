@@ -21,16 +21,16 @@ This repository was built for the **Lacuna Solar Survey Challenge** on Kaggle. I
 ## Directory Structure
 
   solar-panel-prediction
-  ┣ images/ # Input images
-  ┣ notebooks/ # Optional Jupyter analysis notebooks
-  ┣ Train.csv # Training metadata
-  ┣ Test.csv # Test metadata
-  ┣ main.py # Main training and inference script
-  ┣ README.md # This file
-  ┗ submission_*.csv # Output submissions
+  -- images/ # Input images
+  -- notebooks/ # Optional Jupyter analysis notebooks
+  -- Train.csv # Training metadata
+  -- Test.csv # Test metadata
+  -- main.py # Main training and inference script
+  -- README.md # This file
+  -- submission_*.csv # Output submissions
 ---
 
-## 🚀 Getting Started
+## Setting up
 
 ### 1. Clone the repo
 
@@ -44,7 +44,7 @@ Edit
 pip install -r requirements.txt
 Make sure you have access to a CUDA-compatible GPU and your data paths are correctly set in the script.
 
-### 3. Training
+## Training
 To train the model across 3 folds:
 python main.py
 The best model per fold will be saved as:
@@ -52,14 +52,14 @@ best_model_fold0.pth
 best_model_fold1.pth
 best_model_fold2.pth
 
-### 4. Inference & Submission
+## Inference & Submission
 Predictions on the test set will be saved as:
 
 submission_original.csv (with float predictions)
 
 submission_integer.csv (with rounded integers)
 
-### 5. Model Architecture
+## Model Architecture
 Backbone: tf_efficientnetv2_b3 from timm
 
 Metadata Processor: Fully connected + LayerNorm + Dropout
@@ -68,7 +68,7 @@ Fusion: Image and metadata features are concatenated after attention
 
 Regressor: 2-head count predictor with Softplus output
 
-### 5. Tools Used
+## Tools Used
 PyTorch + AMP
 
 Albumentations for augmentation
@@ -79,10 +79,10 @@ Huber Loss + CosineAnnealing Scheduler
 
 Multihead Attention for metadata embedding
 
-### 6. Evaluation Metric
+## Evaluation Metric
 Mean Absolute Error (MAE) on the boil_nbr and pan_nbr predictions.
 
-### 7. License
+## License
 This project is licensed under the MIT License.
 
 ### Acknowledgements
