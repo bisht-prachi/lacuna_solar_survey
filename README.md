@@ -22,12 +22,13 @@ This repository was built for the **Lacuna Solar Survey Challenge** on Kaggle. I
 
   solar-panel-prediction
   -- images/  
-  -- notebooks/  
-  -- Train.csv/ 
-  -- Test.csv/ 
-  -- main.py/ 
-  -- README.md 
-  -- submission_*.csv 
+  -- notebooks/
+  -- Train.csv/
+  -- Test.csv/
+  -- main.py/
+  -- README.md
+  -- submission_*.csv
+  
 ---
 
 ## Setting up
