@@ -21,13 +21,13 @@ This repository was built for the **Lacuna Solar Survey Challenge** on Kaggle. I
 ## Directory Structure
 
   solar-panel-prediction
-  -- images/ # Input images
-  -- notebooks/ # Optional Jupyter analysis notebooks
-  -- Train.csv # Training metadata
-  -- Test.csv # Test metadata
-  -- main.py # Main training and inference script
-  -- README.md # This file
-  -- submission_*.csv # Output submissions
+  -- images/  
+  -- notebooks/  
+  -- Train.csv/ 
+  -- Test.csv/ 
+  -- main.py/ 
+  -- README.md 
+  -- submission_*.csv 
 ---
 
 ## Setting up
