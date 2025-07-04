@@ -78,7 +78,7 @@ This repository was built for the **Lacuna Solar Survey Challenge** on Kaggle. I
 
 ## Evaluation Metric
   Mean Absolute Error (MAE) on the boil_nbr and pan_nbr predictions.
-  Final MAE: 0.947831978
+  Final Public MAE: 0.947831978
   Rank: 45/712
 
 ## License
